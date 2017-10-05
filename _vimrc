@@ -1,16 +1,26 @@
-set nocompatible
+if &compatible
+  set nocompatible
+endif
 
-filetype off
+set runtimepath+=~/dotfiles/vimfiles/dein/repos/github.com/Shougo/dein.vim
 
-set rtp+=~/dotfiles/vimfiles/vundle.git
+call dein#begin(expand('~/.cache/dein'))
 
-call vundle#rc()
-Bundle 'Shougo/neocomplcache'
-Bundle 'Shougo/unite.vim'
-Bundle 'thinca/vim-ref'
-Bundle 'thinca/vim-quickrun'
+call dein#add('Shougo/dein.vim')
+call dein#add('Shougo/vimproc.vim', {'build': 'make'})
 
-filetype plugin indent on    " required!
+call dein#add('Shougo/unite.vim')
+call dein#add('Shougo/neocomplete.vim')
+call dein#add('Shougo/neomru.vim')
+call dein#add('Shougo/neosnippet')
+
+call dein#end()
+
+if dein#check_install()
+    call dein#install()
+endif
+
+filetype plugin indent on
 
 syntax on
 
