@@ -13,12 +13,19 @@ call dein#add('Shougo/unite.vim')
 call dein#add('Shougo/neocomplete.vim')
 call dein#add('Shougo/neomru.vim')
 call dein#add('Shougo/neosnippet')
+call dein#add('fatih/vim-go')
 
 call dein#end()
 
 if dein#check_install()
     call dein#install()
 endif
+
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_structs = 1
+autocmd FileType go :highlight goErr cterm=bold ctermfg=214
+autocmd FileType go :match goErr /\<err\>/
 
 filetype plugin indent on
 
@@ -95,6 +102,10 @@ imap <C-j> <esc>
 imap [ []<left>
 imap ( ()<left>
 imap { {}<left>
+imap ' ''<left>
+imap < <><left>
+imap " ""<left>
+imap ` ``<left>
 
 " ２回esc を押したら検索のハイライトをヤメる
 nmap <Esc><Esc> :nohlsearch<CR><Esc>
