@@ -102,10 +102,6 @@ imap <C-j> <esc>
 imap [ []<left>
 imap ( ()<left>
 imap { {}<left>
-imap ' ''<left>
-imap < <><left>
-imap " ""<left>
-imap ` ``<left>
 
 " ２回esc を押したら検索のハイライトをヤメる
 nmap <Esc><Esc> :nohlsearch<CR><Esc>
