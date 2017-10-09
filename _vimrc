@@ -96,8 +96,20 @@ set nf=hex
 " マウス使えます
 set mouse=a
 
+
+let g:go_list_type = "quickfix"
+
 " :wを自動化
 set autowrite
+
+map <C-n> :cnext<CR>
+map <C-m> :cprevious<CR>
+nnoremap <leader>a :cclose<CR>
+
+autocmd FileType go nmap <leader>b  <Plug>(go-build)
+autocmd FileType go nmap <leader>r  <Plug>(go-run)
+
+
 
 " インサートモードの時に C-j でノーマルモードに戻る
 imap <C-j> <esc>
