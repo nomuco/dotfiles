@@ -110,7 +110,7 @@ autocmd FileType go nmap <leader>b  <Plug>(go-build)
 autocmd FileType go nmap <leader>r  <Plug>(go-run)
 
 " インサートモードの時に C-j でノーマルモードに戻る
-imap <C-j> <esc>
+imap jj <esc>
 " [ って打ったら [] って入力されてしかも括弧の中にいる(以下同様)
 imap [ []<left>
 imap ( ()<left>
