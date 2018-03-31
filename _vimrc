@@ -131,22 +131,22 @@ if has('persistent_undo')
 endif
 
 " 全角スペース・行末スペース・タブの可視化
-if has('syntax')
-    syntax on
-
-    " PODバグ対策
-    syn sync fromstart
-
-    function! ActiveInvisibleIndicator()
-        syntax match InvisibleJISX0208Space "　" display containedin=ALL
-        highlight InvisibleJISX0208Space term=underline ctermbg=Blue guibg=darkgray gui=underline
-    endfunction
-
-    augroup invisible
-        autocmd! invisible
-        autocmd BufNew,BufRead * call ActivateInvisibleIndicator()
-    augroup END
-endif
+" if has('syntax')
+"     syntax on
+" 
+"     " PODバグ対策
+"     syn sync fromstart
+" 
+"     function! ActiveInvisibleIndicator()
+"         syntax match InvisibleJISX0208Space "　" display containedin=ALL
+"         highlight InvisibleJISX0208Space term=underline ctermbg=Blue guibg=darkgray gui=underline
+"     endfunction
+" 
+"     augroup invisible
+"         autocmd! invisible
+"         autocmd BufNew,BufRead * call ActivateInvisibleIndicator()
+"     augroup END
+" endif
 
 " Colorscheme
 syntax enable
