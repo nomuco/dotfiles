@@ -1,0 +1,21 @@
+" 検索をファイルの先頭へ循環しない
+set nowrapscan
+
+" 大文字小文字の区別なし
+set ignorecase
+
+" 検索時に大文字を含んでいた場合大/小を区別
+set smartcase
+
+" 検索対象をハイライト
+" ハイライトを消す場合は :noh[l]
+set hlsearch
+
+" スクロール時に表示を10行確保
+set scrolloff=10
+
+" jjでESC
+inoremap jj <esc>
+
+" escを2回押すと検索のハイライトをやめる
+nmap <esc><esc> :nohlsearch<CR><esc>
