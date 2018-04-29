@@ -1,4 +1,4 @@
-#!/bin/fish
+#!/bin/sh
 
 set -u
 DOT_DIRECTORY="${HOME}/dotfiles"
