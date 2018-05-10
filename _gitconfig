@@ -1,0 +1,27 @@
+[core]
+	excludesFile = /Users/kotanomura/.gitignore_global
+
+[user]
+	name = nomurakkooo
+	email = b1519008@planet.kanazawa-it.ac.jp
+
+[alias]
+    st = status
+    cm = commit
+    co = checkout
+    cob = checkout -b
+    br = branch
+    brd = branch -D
+
+[ghq]
+	root = /Users/kotanomura/go/src
+
+[pager]
+	diff = diff-so-fancy | less --tabs=4 -RFX --pattern='^(added|deleted|modified): '
+	show = diff-so-fancy | less --tabs=4 -RFX
+
+[color "diff-highlight"]
+	oldNormal = red bold
+	oldHighlight = red bold 52
+	newNormal = green bold
+	newHighlight = green bold 22
