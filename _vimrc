@@ -12,6 +12,7 @@ Plug 'junegunn/vim-plug',
         \ {'dir': '~/.vim/plugged/vim-plug/autoload'}
 
 Plug 'fatih/vim-go'
+Plug 'Shougo/neocomplete.vim'
 Plug 'fatih/molokai'
 Plug 'AndrewRadev/splitjoin.vim'
 Plug 'SirVer/ultisnips'
@@ -174,6 +175,8 @@ imap jj <esc>
 imap [ []<left>
 imap ( ()<left>
 imap { {}<left>
+
+inoremap <expr><C-i> neocoplete#complete_common_string()
 
 " ２回esc を押したら検索のハイライトをヤメる
 nmap <Esc><Esc> :nohlsearch<CR><Esc>
