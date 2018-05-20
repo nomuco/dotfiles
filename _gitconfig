@@ -2,16 +2,16 @@
 	excludesFile = /Users/kotanomura/.gitignore_global
 
 [user]
-	name = nomuco 
+	name = nomuco
 	email = b1519008@planet.kanazawa-it.ac.jp
 
 [alias]
     st = status
     cm = commit
     co = checkout
-    cob = checkout -b
+    cb = checkout -b
     br = branch
-    brd = branch -D
+    bd = branch -D
 
 [ghq]
 	root = /Users/kotanomura/go/src
