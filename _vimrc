@@ -13,7 +13,6 @@ Plug 'junegunn/vim-plug',
 
 Plug 'fatih/vim-go'
 Plug 'Shougo/neocomplete.vim'
-Plug 'fatih/molokai'
 Plug 'AndrewRadev/splitjoin.vim'
 Plug 'SirVer/ultisnips'
 Plug 'ctrlpvim/ctrlp.vim'
@@ -27,7 +26,10 @@ Plug 'pbrisbin/html-template-syntax'
 Plug 'othree/xml.vim'
 Plug 'maksimr/vim-jsbeautify'
 Plug 'einars/js-beautify'
+Plug 'ajmwagar/vim-deus'
 call plug#end()
+
+" Plug 'romainl/flattened'
 
 """"""""""""""""""""""
 "     PluginConfs    "
@@ -38,11 +40,22 @@ call plug#end()
 " -----------------
 
 " -- solarized theme
+" set background=dark
+" colorscheme solarized
+"
+"
+" -- deus
+set t_Co=256
+colorscheme deus
+set termguicolors
 set background=dark
-try
-    colorscheme solarized
-catch
-endtry
+let g:deus_termcolors=256
+
+" -- molokai
+" syntax enable
+" let g:rehash256 = 1
+" let g:molokai_original = 1
+" colorscheme molokai
 
 " ----------------------------
 "       File Management
@@ -134,27 +147,21 @@ endif
 " 全角スペース・行末スペース・タブの可視化
 " if has('syntax')
 "     syntax on
-" 
+"
 "     " PODバグ対策
 "     syn sync fromstart
-" 
+"
 "     function! ActiveInvisibleIndicator()
 "         syntax match InvisibleJISX0208Space "　" display containedin=ALL
 "         highlight InvisibleJISX0208Space term=underline ctermbg=Blue guibg=darkgray gui=underline
 "     endfunction
-" 
+"
 "     augroup invisible
 "         autocmd! invisible
 "         autocmd BufNew,BufRead * call ActivateInvisibleIndicator()
 "     augroup END
 " endif
 
-" Colorscheme
-syntax enable
-set t_Co=256
-let g:rehash256 = 1
-let g:molokai_original = 1
-colorscheme molokai
 
 """"""""""""""""""""""
 "      Mappings      "
