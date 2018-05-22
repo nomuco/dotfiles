@@ -68,6 +68,7 @@ formulas=(
 "brew tap..."
 brew tap homebrew/dupes
 brew tap homebrew/versions
+brew tap caskroom/fonts
 #brew tap homebrew/homebrew-php
 #brew tap homebrew/apache
 #brew tap sanemat/font
@@ -94,6 +95,7 @@ casks=(
     virtualbox
     vagrant
     vagrant-manager
+    font-fira-code
 )
 
 echo "start brew cask install apps..."
