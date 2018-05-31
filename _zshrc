@@ -19,6 +19,9 @@ typeset -U path PATH
 # rbenvのパスを通す
 eval "$(rbenv init -)"
 
+# thefuckのパスを通す
+eval $(thefuck --alias)
+
 # zplugを導入するPATH
 # export ZPLUG_HOME=/usr/local/opt/zplug
 # source $ZPLUG_HOME/init.zsh
@@ -30,7 +33,8 @@ export ZSH=/Users/kotanomura/.oh-my-zsh
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 # oh-my-zshで利用できるテーマを指定
-ZSH_THEME="blinks"
+# ZSH_THEME="agkozak"
+ZSH_THEME="bureau"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
@@ -139,3 +143,15 @@ bindkey -v
 
 # 補完で小文字でも大文字にマッチさせる
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
+
+# hyper-tabs-icon-plus
+precmd() {
+   pwd=$(pwd)
+   cwd=${pwd##*/}
+   print -Pn "\e]0;$cwd\a"
+}
+
+# preexec() {
+#    if overridden; then return; fi
+#    printf "\033]0;%s\a" "${1%% *} | $cwd"
+# }
