@@ -14,6 +14,14 @@ export PATH=/sbin:$PATH
 export PATH=/User/kotanomura/.node_modules_global/bin:$PATH
 # export PATH=/usr/loacl/go/bin:$PATH
 
+# GOPATH
+export GOPATH=/Users/kotanomura/go
+
+# JAVA
+export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
+
+typeset -U path JAVA_HOME
+typeset -U path GOPATH
 typeset -U path PATH
 
 # rbenvのパスを通す
