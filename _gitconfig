@@ -1,5 +1,5 @@
 [core]
-	excludesFile = /Users/kotanomura/.gitignore_global
+	excludesFile = /Users/k.n/.gitignore_global
 
 [user]
 	name = nomuco
@@ -14,7 +14,7 @@
     bd = branch -D
 
 [ghq]
-	root = /Users/kotanomura/go/src
+	root = /Users/k.n/go/src
 
 [pager]
 	diff = diff-so-fancy | less --tabs=4 -RFX --pattern='^(added|deleted|modified): '
