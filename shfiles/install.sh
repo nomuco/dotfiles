@@ -26,6 +26,10 @@ echo "start link to dotfiles"
 
 sh ./link.sh
 
+echo "restart shell"
+
+exec /usr/local/bin/zsh
+
 cat << END
 
 _/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/_/
